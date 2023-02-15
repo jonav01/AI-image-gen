@@ -1,10 +1,11 @@
 FROM node:lts-alpine3.17
+RUN npm install -g nodemon
 
-WORKDIR /app/client
+WORKDIR /app
 COPY package.json .
 RUN npm install
 
 COPY . .
-EXPOSE 8000
+EXPOSE 8080
 
 CMD ["npm","start"]
