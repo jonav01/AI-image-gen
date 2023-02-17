@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+  react-fe:
+    build: './client'
+    ports:
+      - "3000:8000"
+  
+  express-be:
+    build: './server'
+    ports:
+      - "8081:8080"
+
+
