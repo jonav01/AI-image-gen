@@ -16,7 +16,7 @@ function CreatePost() {
     if (form.prompt) {
       try {
         setgeneratingImg(true);
-        const response = await fetch("http://localhost:8080/api/v1/dalle", {
+        const response = await fetch("http://20.194.225.121:8081/api/v1/dalle", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -42,7 +42,7 @@ function CreatePost() {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:8080/api/v1/post", {
+        const response = await fetch("http://20.194.225.121:8081/api/v1/post", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
